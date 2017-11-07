@@ -1,0 +1,8 @@
+<h1>All Tasks</h1>
+
+<% @task_managers.each do |task_manager| %>
+  <h2><%= link_to task_manager.description, task_manager_path(task_manager) %></h2>
+  <p>Deadline: <%= task_manager.deadline %></p>
+<% end %>
+
+<p><%= link_to 'Nova Task', new_task_manager_path %></p>

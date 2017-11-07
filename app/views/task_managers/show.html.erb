@@ -1,0 +1,9 @@
+<h1>Task</h1>
+
+<h2><%= @task_manager.description %></h2>
+<p><%= @task_manager.deadline %></p>
+<p><%= @task_manager.done %></p>
+
+<p><%= link_to 'Ver Todas as tasks', task_managers_path %></p>
+<p><%= link_to 'Editar', edit_task_manager_path(@task_manager) %></p>
+<p><%= link_to 'Excluir', task_manager_path(@task_manager), method: 'delete', data: { confirm: 'Quer mesmo apagar?' } %></p>
